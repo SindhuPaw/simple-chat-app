@@ -1,5 +1,3 @@
-# simple-chat-app
-
 # Mini Project: Aplikasi Chat Statis untuk Qiscus UniTalk UNY
 
 ## Deskripsi

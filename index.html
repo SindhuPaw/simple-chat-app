@@ -8,10 +8,9 @@
 </head>
 <body>
 
-    <!-- Ini adalah container utama yang membungkus seluruh aplikasi chat. -->
     <main class="chat-app-container">
 
-        <!-- BAGIAN 1: SIDEBAR / DAFTAR KONTAK -->
+        <!-- DAFTAR KONTAK -->
         <!-- 
             Tag <aside> digunakan untuk konten yang berhubungan 
             namun terpisah dari konten utama, cocok untuk sidebar.
@@ -19,7 +18,6 @@
         <aside class="contact-list">
             <h2>Chats</h2>
             <ul>
-                <!-- Ini adalah contoh kontak, nanti akan dibuat dinamis -->
                 <li class="contact active">
                     <p class="contact-name">Tim Rekruter Qiscus</p>
                     <p class="last-message">Halo, perkenalkan nama saya Sindhu Pawitra. Saya membuat aplikasi ini untuk belajar dasar-dasar web development, terutama manipulasi DOM dengan JavaScript. Proyek ini adalah inisiatif saya untuk mempersiapkan diri mengikuti acara UniTalk with Qiscus.</p>
@@ -35,55 +33,41 @@
             </ul>
         </aside>
 
-        <!-- BAGIAN 2: JENDELA PERCAKAPAN UTAMA -->
-        <!-- 
-            Tag <section> digunakan untuk mengelompokkan konten utama,
-            yaitu jendela percakapan.
-        -->
+        <!-- JENDELA PERCAKAPAN -->
         <section class="chat-window">
 
-            <!-- Header dari jendela chat, berisi nama kontak yang sedang aktif -->
             <header class="chat-header">
                 <h3>Tim Rekruter Qiscus</h3>
             </header>
 
-            <!-- 
-                Area utama untuk menampilkan semua gelembung pesan.
-                'id' digunakan agar mudah ditarget oleh JavaScript saat
-                menambahkan pesan baru.
-            -->
             <div class="message-container" id="message-container">
-                <!-- pesan yang diterima -->
                 <div class="chat-bubble received">
                     <p>Halo! Ada yang bisa kami bantu?</p>
+                    <p class="timestamp">10:20</p>
                 </div>
 
-                <!-- pesan yang dikirim -->
                 <div class="chat-bubble sent">
                     <p>Halo, perkenalkan nama saya Sindhu Pawitra. Saya membuat aplikasi ini untuk belajar dasar-dasar web development, terutama manipulasi DOM dengan JavaScript. Proyek ini adalah inisiatif saya untuk mempersiapkan diri mengikuti acara UniTalk with Qiscus.</p>
+                    <p class="timestamp">10:30</p>
                 </div>
             </div>
 
-            <!-- 
-                Form untuk input pesan. 
-                'id' diberikan agar mudah ditarget oleh JavaScript untuk menangani
-                event pengiriman pesan.
-            -->
             <footer class="message-form-container">
-                <form id="message-form">
+                <form class="message-form" id="message-form">
                     <input 
                         type="text" 
+                        class="message-input"
                         id="message-input" 
-                        placeholder="Ketik pesan Anda di sini..." 
+                        placeholder="Ketik pesan di sini..." 
                         autocomplete="off"
                     >
-                    <button type="submit">Kirim</button>
+                    <button type="submit">Send</button>
                 </form>
             </footer>
 
         </section>
 
     </main>
-
+    <script src="script.js"></script>
 </body>
 </html>
